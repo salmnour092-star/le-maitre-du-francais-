@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Le MaÃ®tre du FranÃ§ais â€” Jeu d'apprentissage</title>
+<title>Le Ma&icirc;tre du Fran&ccedil;ais &mdash; Jeu d'apprentissage</title>
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;600;700&display=swap');
 
@@ -663,13 +663,13 @@ body {
 <body>
 <div class="game-container">
     <div class="header">
-        <h1>Le MaÃ®tre du FranÃ§ais</h1>
-        <div class="subtitle">MaÃ®trisez le franÃ§ais en jouant</div>
+        <h1>Le Ma&icirc;tre du Fran&ccedil;ais</h1>
+        <div class="subtitle">Ma&icirc;trisez le fran&ccedil;ais en jouant</div>
         <div class="french-stripe"><span></span><span></span><span></span></div>
         <div class="stats-bar" id="globalStats">
-            <div class="stat-pill"><span class="icon">â­</span><span>Niveau <span id="playerLevel">1</span></span></div>
-            <div class="stat-pill"><span class="icon">ðŸ†</span><span><span id="totalXP">0</span> XP</span></div>
-            <div class="stat-pill"><span class="icon">ðŸ”¥</span><span class="streak-indicator"><span id="bestStreak">0</span> SÃ©rie max</span></div>
+            <div class="stat-pill"><span class="icon">⭐</span><span>Niveau <span id="playerLevel">1</span></span></div>
+            <div class="stat-pill"><span class="icon">🏆</span><span><span id="totalXP">0</span> XP</span></div>
+            <div class="stat-pill"><span class="icon">🔥</span><span class="streak-indicator"><span id="bestStreak">0</span> S&eacute;rie max</span></div>
         </div>
         <div class="xp-bar-container">
             <div class="xp-bar-label"><span>Progression XP</span><span><span id="currentXP">0</span> / <span id="xpToNext">100</span></span></div>
@@ -677,44 +677,44 @@ body {
         </div>
     </div>
 
-    <div class="combo-display" id="comboDisplay">ðŸ”¥ x<span id="comboCount">0</span> Combo !</div>
+    <div class="combo-display" id="comboDisplay">🔥 x<span id="comboCount">0</span> Combo !</div>
 
     <div class="screen active" id="menuScreen">
         <div class="menu-grid">
             <div class="mode-card" onclick="startGame('translate')">
-                <span class="mode-icon">ðŸ”„</span>
+                <span class="mode-icon">🔄</span>
                 <h3>Traduction Rapide</h3>
-                <p>Traduisez des mots entre le franÃ§ais et l'anglais aussi vite que possible !</p>
+                <p>Traduisez des mots entre le fran&ccedil;ais et l'anglais aussi vite que possible !</p>
                 <div class="high-score">Record : <span id="bestTranslate">0</span></div>
             </div>
             <div class="mode-card" onclick="startGame('verbs')">
-                <span class="mode-icon">ðŸ“–</span>
-                <h3>MaÃ®tre des Verbes</h3>
-                <p>Conjuguez des verbes franÃ§ais au prÃ©sent avec diffÃ©rents sujets.</p>
+                <span class="mode-icon">📖</span>
+                <h3>Ma&icirc;tre des Verbes</h3>
+                <p>Conjuguez des verbes fran&ccedil;ais au pr&eacute;sent avec diff&eacute;rents sujets.</p>
                 <div class="high-score">Record : <span id="bestVerbs">0</span></div>
             </div>
             <div class="mode-card" onclick="startGame('gender')">
-                <span class="mode-icon">âš–ï¸</span>
+                <span class="mode-icon">⚖️</span>
                 <h3>Duel du Genre</h3>
-                <p>Masculin ou fÃ©minin ? Testez vos connaissances sur le genre des noms !</p>
+                <p>Masculin ou f&eacute;minin ? Testez vos connaissances sur le genre des noms !</p>
                 <div class="high-score">Record : <span id="bestGender">0</span></div>
             </div>
             <div class="mode-card" onclick="startGame('scramble')">
-                <span class="mode-icon">ðŸ§©</span>
-                <h3>Mots MÃ©langÃ©s</h3>
-                <p>Remettez les lettres dans l'ordre avant que le temps ne s'Ã©coule !</p>
+                <span class="mode-icon">🧩</span>
+                <h3>Mots M&eacute;lang&eacute;s</h3>
+                <p>Remettez les lettres dans l'ordre avant que le temps ne s'&eacute;coule !</p>
                 <div class="high-score">Record : <span id="bestScramble">0</span></div>
             </div>
             <div class="mode-card" onclick="startGame('fillblank')">
-                <span class="mode-icon">âœï¸</span>
-                <h3>ComplÃ©tez la Phrase</h3>
-                <p>ComplÃ©tez les phrases franÃ§aises avec le verbe conjuguÃ© correct.</p>
+                <span class="mode-icon">✏️</span>
+                <h3>Compl&eacute;tez la Phrase</h3>
+                <p>Compl&eacute;tez les phrases fran&ccedil;aises avec le verbe conjugu&eacute; correct.</p>
                 <div class="high-score">Record : <span id="bestFillBlank">0</span></div>
             </div>
             <div class="mode-card" onclick="startGame('comprehension')">
-                <span class="mode-icon">ðŸ“š</span>
-                <h3>ComprÃ©hension</h3>
-                <p>Lisez de courts textes en franÃ§ais et rÃ©pondez aux questions.</p>
+                <span class="mode-icon">📚</span>
+                <h3>Compr&eacute;hension</h3>
+                <p>Lisez de courts textes en fran&ccedil;ais et r&eacute;pondez aux questions.</p>
                 <div class="high-score">Record : <span id="bestComprehension">0</span></div>
             </div>
         </div>
@@ -725,7 +725,7 @@ body {
             <div class="game-header">
                 <h2 id="gameTitle">Mode de Jeu</h2>
                 <div style="display:flex; gap:15px; align-items:center;">
-                    <div class="lives-display" id="livesDisplay">â¤ï¸â¤ï¸â¤ï¸</div>
+                    <div class="lives-display" id="livesDisplay">❤️❤️❤️</div>
                     <div style="font-weight:700; color:var(--gold);" id="gameScore">0</div>
                 </div>
             </div>
@@ -740,7 +740,7 @@ body {
             <div class="feedback" id="feedback"></div>
             <div id="gameContent"></div>
             <div style="text-align:center; margin-top:15px;">
-                <button class="hint-btn" id="hintBtn" onclick="showHint()">ðŸ’¡ Besoin d'un indice ?</button>
+                <button class="hint-btn" id="hintBtn" onclick="showHint()">💡 Besoin d'un indice ?</button>
                 <div class="hint-text" id="hintText"></div>
             </div>
         </div>
@@ -748,14 +748,14 @@ body {
 
     <div class="screen" id="resultsScreen">
         <div class="game-card results-card">
-            <div class="trophy" id="resultEmoji">ðŸ†</div>
-            <h2 id="resultTitle">Bien jouÃ© !</h2>
+            <div class="trophy" id="resultEmoji">🏆</div>
+            <h2 id="resultTitle">Bien jou&eacute; !</h2>
             <div class="score-display" id="finalScore">850</div>
             <div class="results-stats">
                 <div class="result-stat"><div class="number" id="statCorrect">8</div><div class="label">Corrects</div></div>
                 <div class="result-stat"><div class="number" id="statTotal">10</div><div class="label">Questions</div></div>
-                <div class="result-stat"><div class="number" id="statAccuracy">80%</div><div class="label">PrÃ©cision</div></div>
-                <div class="result-stat"><div class="number" id="statXP">+50</div><div class="label">XP gagnÃ©s</div></div>
+                <div class="result-stat"><div class="number" id="statAccuracy">80%</div><div class="label">Pr&eacute;cision</div></div>
+                <div class="result-stat"><div class="number" id="statXP">+50</div><div class="label">XP gagn&eacute;s</div></div>
             </div>
             <div class="btn-group">
                 <button class="btn btn-primary" onclick="startGame(currentMode)">Rejouer</button>
@@ -773,7 +773,7 @@ const vocabulary = [
     {fr: "Bonjour", en: "Hello", category: "Salutations"},
     {fr: "Au revoir", en: "Goodbye", category: "Salutations"},
     {fr: "Merci", en: "Thank you", category: "Salutations"},
-    {fr: "S'il vous plaÃ®t", en: "Please", category: "Salutations"},
+    {fr: "S'il vous pla&icirc;t", en: "Please", category: "Salutations"},
     {fr: "Excusez-moi", en: "Excuse me", category: "Salutations"},
     {fr: "Chat", en: "Cat", category: "Animaux"},
     {fr: "Chien", en: "Dog", category: "Animaux"},
@@ -786,8 +786,8 @@ const vocabulary = [
     {fr: "Vin", en: "Wine", category: "Nourriture"},
     {fr: "Fromage", en: "Cheese", category: "Nourriture"},
     {fr: "Maison", en: "House", category: "Lieux"},
-    {fr: "Ã‰cole", en: "School", category: "Lieux"},
-    {fr: "HÃ´pital", en: "Hospital", category: "Lieux"},
+    {fr: "&Eacute;cole", en: "School", category: "Lieux"},
+    {fr: "H&ocirc;pital", en: "Hospital", category: "Lieux"},
     {fr: "Magasin", en: "Store", category: "Lieux"},
     {fr: "Restaurant", en: "Restaurant", category: "Lieux"},
     {fr: "Heureux", en: "Happy", category: "Adjectifs"},
@@ -809,13 +809,13 @@ const vocabulary = [
     {fr: "Table", en: "Table", category: "Objets"},
     {fr: "Chaise", en: "Chair", category: "Objets"},
     {fr: "Porte", en: "Door", category: "Objets"},
-    {fr: "FenÃªtre", en: "Window", category: "Objets"},
+    {fr: "Fen&ecirc;tre", en: "Window", category: "Objets"},
     {fr: "Famille", en: "Family", category: "Personnes"},
     {fr: "Ami", en: "Friend", category: "Personnes"},
-    {fr: "FrÃ¨re", en: "Brother", category: "Personnes"},
-    {fr: "SÅ“ur", en: "Sister", category: "Personnes"},
-    {fr: "PÃ¨re", en: "Father", category: "Personnes"},
-    {fr: "MÃ¨re", en: "Mother", category: "Personnes"},
+    {fr: "Fr&egrave;re", en: "Brother", category: "Personnes"},
+    {fr: "S&oelig;ur", en: "Sister", category: "Personnes"},
+    {fr: "P&egrave;re", en: "Father", category: "Personnes"},
+    {fr: "M&egrave;re", en: "Mother", category: "Personnes"},
     {fr: "Jour", en: "Day", category: "Temps"},
     {fr: "Nuit", en: "Night", category: "Temps"},
     {fr: "Matin", en: "Morning", category: "Temps"},
@@ -827,7 +827,7 @@ const verbs = [
     {inf: "parler", en: "to speak", present: {je: "parle", tu: "parles", il: "parle", nous: "parlons", vous: "parlez", ils: "parlent"}},
     {inf: "manger", en: "to eat", present: {je: "mange", tu: "manges", il: "mange", nous: "mangeons", vous: "mangez", ils: "mangent"}},
     {inf: "finir", en: "to finish", present: {je: "finis", tu: "finis", il: "finit", nous: "finissons", vous: "finissez", ils: "finissent"}},
-    {inf: "Ãªtre", en: "to be", present: {je: "suis", tu: "es", il: "est", nous: "sommes", vous: "Ãªtes", ils: "sont"}},
+    {inf: "&ecirc;tre", en: "to be", present: {je: "suis", tu: "es", il: "est", nous: "sommes", vous: "&ecirc;tes", ils: "sont"}},
     {inf: "avoir", en: "to have", present: {je: "ai", tu: "as", il: "a", nous: "avons", vous: "avez", ils: "ont"}},
     {inf: "faire", en: "to do/make", present: {je: "fais", tu: "fais", il: "fait", nous: "faisons", vous: "faites", ils: "font"}},
     {inf: "aller", en: "to go", present: {je: "vais", tu: "vas", il: "va", nous: "allons", vous: "allez", ils: "vont"}},
@@ -838,7 +838,7 @@ const verbs = [
     {inf: "voir", en: "to see", present: {je: "vois", tu: "vois", il: "voit", nous: "voyons", vous: "voyez", ils: "voient"}},
     {inf: "savoir", en: "to know", present: {je: "sais", tu: "sais", il: "sait", nous: "savons", vous: "savez", ils: "savent"}},
     {inf: "dormir", en: "to sleep", present: {je: "dors", tu: "dors", il: "dort", nous: "dormons", vous: "dormez", ils: "dorment"}},
-    {inf: "Ã©crire", en: "to write", present: {je: "Ã©cris", tu: "Ã©cris", il: "Ã©crit", nous: "Ã©crivons", vous: "Ã©crivez", ils: "Ã©crivent"}}
+    {inf: "&eacute;crire", en: "to write", present: {je: "&eacute;cris", tu: "&eacute;cris", il: "&eacute;crit", nous: "&eacute;crivons", vous: "&eacute;crivez", ils: "&eacute;crivent"}}
 ];
 
 const genderNouns = [
@@ -858,7 +858,7 @@ const genderNouns = [
     {word: "Feu", gender: "m", translation: "Fire"},
     {word: "Terre", gender: "f", translation: "Earth"},
     {word: "Ciel", gender: "m", translation: "Sky"},
-    {word: "Ã‰toile", gender: "f", translation: "Star"},
+    {word: "&Eacute;toile", gender: "f", translation: "Star"},
     {word: "Pont", gender: "m", translation: "Bridge"},
     {word: "Rue", gender: "f", translation: "Street"},
     {word: "Ville", gender: "f", translation: "City"},
@@ -866,63 +866,63 @@ const genderNouns = [
     {word: "Langue", gender: "f", translation: "Language"},
     {word: "Mot", gender: "m", translation: "Word"},
     {word: "Question", gender: "f", translation: "Question"},
-    {word: "RÃ©ponse", gender: "f", translation: "Answer"},
-    {word: "ProblÃ¨me", gender: "m", translation: "Problem"},
-    {word: "IdÃ©e", gender: "f", translation: "Idea"},
-    {word: "RÃªve", gender: "m", translation: "Dream"},
+    {word: "R&eacute;ponse", gender: "f", translation: "Answer"},
+    {word: "Probl&egrave;me", gender: "m", translation: "Problem"},
+    {word: "Id&eacute;e", gender: "f", translation: "Idea"},
+    {word: "R&ecirc;ve", gender: "m", translation: "Dream"},
     {word: "Amour", gender: "m", translation: "Love"},
-    {word: "AmitiÃ©", gender: "f", translation: "Friendship"}
+    {word: "Amiti&eacute;", gender: "f", translation: "Friendship"}
 ];
 
 const fillBlanks = [
-    {sentence: "Je ___ un livre. (lire)", answer: "lis", options: ["lis", "lit", "lisons", "lisez"], hint: "PrÃ©sent de 'lire', 1Ã¨re personne du singulier"},
-    {sentence: "Il ___ franÃ§ais. (parler)", answer: "parle", options: ["parle", "parles", "parlons", "parlent"], hint: "3Ã¨me personne du singulier de 'parler'"},
-    {sentence: "Nous ___ au parc. (aller)", answer: "allons", options: ["vais", "vas", "allons", "allez"], hint: "1Ã¨re personne du pluriel de 'aller'"},
-    {sentence: "Elle ___ du pain. (manger)", answer: "mange", options: ["mange", "manges", "mangeons", "mangent"], hint: "3Ã¨me personne du singulier de 'manger'"},
-    {sentence: "Vous ___ trÃ¨s gentil. (Ãªtre)", answer: "Ãªtes", options: ["suis", "es", "est", "Ãªtes"], hint: "2Ã¨me personne du pluriel de 'Ãªtre'"},
-    {sentence: "Ils ___ Ã  l'Ã©cole. (aller)", answer: "vont", options: ["vais", "vas", "va", "vont"], hint: "3Ã¨me personne du pluriel de 'aller'"},
-    {sentence: "Tu ___ un cafÃ© ? (vouloir)", answer: "veux", options: ["veux", "veut", "voulons", "veulent"], hint: "2Ã¨me personne du singulier de 'vouloir'"},
-    {sentence: "Je ___ fatiguÃ©. (Ãªtre)", answer: "suis", options: ["suis", "es", "est", "sommes"], hint: "1Ã¨re personne du singulier de 'Ãªtre'"},
-    {sentence: "Nous ___ la vÃ©ritÃ©. (savoir)", answer: "savons", options: ["sais", "sait", "savons", "savez"], hint: "1Ã¨re personne du pluriel de 'savoir'"},
-    {sentence: "Elles ___ des fleurs. (voir)", answer: "voient", options: ["vois", "voit", "voyons", "voient"], hint: "3Ã¨me personne du pluriel de 'voir'"},
-    {sentence: "Je ___ au cinÃ©ma. (venir)", answer: "viens", options: ["viens", "vient", "venons", "venez"], hint: "1Ã¨re personne du singulier de 'venir'"},
-    {sentence: "Il ___ bien dormir. (pouvoir)", answer: "peut", options: ["peux", "peut", "pouvons", "peuvent"], hint: "3Ã¨me personne du singulier de 'pouvoir'"},
-    {sentence: "Nous ___ le dÃ®ner. (prendre)", answer: "prenons", options: ["prends", "prend", "prenons", "prenez"], hint: "1Ã¨re personne du pluriel de 'prendre'"},
-    {sentence: "Tu ___ une lettre. (Ã©crire)", answer: "Ã©cris", options: ["Ã©cris", "Ã©crit", "Ã©crivons", "Ã©crivez"], hint: "2Ã¨me personne du singulier de 'Ã©crire'"},
-    {sentence: "Ils ___ la musique. (finir)", answer: "finissent", options: ["finis", "finit", "finissons", "finissent"], hint: "3Ã¨me personne du pluriel de 'finir'"}
+    {sentence: "Je ___ un livre. (lire)", answer: "lis", options: ["lis", "lit", "lisons", "lisez"], hint: "Pr&eacute;sent de 'lire', 1&egrave;re personne du singulier"},
+    {sentence: "Il ___ fran&ccedil;ais. (parler)", answer: "parle", options: ["parle", "parles", "parlons", "parlent"], hint: "3&egrave;me personne du singulier de 'parler'"},
+    {sentence: "Nous ___ au parc. (aller)", answer: "allons", options: ["vais", "vas", "allons", "allez"], hint: "1&egrave;re personne du pluriel de 'aller'"},
+    {sentence: "Elle ___ du pain. (manger)", answer: "mange", options: ["mange", "manges", "mangeons", "mangent"], hint: "3&egrave;me personne du singulier de 'manger'"},
+    {sentence: "Vous ___ tr&egrave;s gentil. (&ecirc;tre)", answer: "&ecirc;tes", options: ["suis", "es", "est", "&ecirc;tes"], hint: "2&egrave;me personne du pluriel de '&ecirc;tre'"},
+    {sentence: "Ils ___ &agrave; l'&eacute;cole. (aller)", answer: "vont", options: ["vais", "vas", "va", "vont"], hint: "3&egrave;me personne du pluriel de 'aller'"},
+    {sentence: "Tu ___ un caf&eacute; ? (vouloir)", answer: "veux", options: ["veux", "veut", "voulons", "veulent"], hint: "2&egrave;me personne du singulier de 'vouloir'"},
+    {sentence: "Je ___ fatigu&eacute;. (&ecirc;tre)", answer: "suis", options: ["suis", "es", "est", "sommes"], hint: "1&egrave;re personne du singulier de '&ecirc;tre'"},
+    {sentence: "Nous ___ la v&eacute;rit&eacute;. (savoir)", answer: "savons", options: ["sais", "sait", "savons", "savez"], hint: "1&egrave;re personne du pluriel de 'savoir'"},
+    {sentence: "Elles ___ des fleurs. (voir)", answer: "voient", options: ["vois", "voit", "voyons", "voient"], hint: "3&egrave;me personne du pluriel de 'voir'"},
+    {sentence: "Je ___ au cin&eacute;ma. (venir)", answer: "viens", options: ["viens", "vient", "venons", "venez"], hint: "1&egrave;re personne du singulier de 'venir'"},
+    {sentence: "Il ___ bien dormir. (pouvoir)", answer: "peut", options: ["peux", "peut", "pouvons", "peuvent"], hint: "3&egrave;me personne du singulier de 'pouvoir'"},
+    {sentence: "Nous ___ le d&icirc;ner. (prendre)", answer: "prenons", options: ["prends", "prend", "prenons", "prenez"], hint: "1&egrave;re personne du pluriel de 'prendre'"},
+    {sentence: "Tu ___ une lettre. (&eacute;crire)", answer: "&eacute;cris", options: ["&eacute;cris", "&eacute;crit", "&eacute;crivons", "&eacute;crivez"], hint: "2&egrave;me personne du singulier de '&eacute;crire'"},
+    {sentence: "Ils ___ la musique. (finir)", answer: "finissent", options: ["finis", "finit", "finissons", "finissent"], hint: "3&egrave;me personne du pluriel de 'finir'"}
 ];
 
 const comprehensionTexts = [
     {
-        text: "Marie est une Ã©tudiante franÃ§aise. Elle habite Ã  Paris avec sa famille. Tous les matins, elle prend le mÃ©tro pour aller Ã  l'universitÃ©. Elle Ã©tudie la mÃ©decine. Le soir, elle aime lire des livres et Ã©couter de la musique.",
+        text: "Marie est une &eacute;tudiante fran&ccedil;aise. Elle habite &agrave; Paris avec sa famille. Tous les matins, elle prend le m&eacute;tro pour aller &agrave; l'universit&eacute;. Elle &eacute;tudie la m&eacute;decine. Le soir, elle aime lire des livres et &eacute;couter de la musique.",
         questions: [
-            {q: "OÃ¹ habite Marie ?", options: ["Ã€ Paris", "Ã€ Lyon", "Ã€ Marseille", "Ã€ Bordeaux"], answer: 0},
-            {q: "Qu'Ã©tudie Marie ?", options: ["Le droit", "La mÃ©decine", "Les langues", "L'histoire"], answer: 1},
-            {q: "Comment va-t-elle Ã  l'universitÃ© ?", options: ["En bus", "Ã€ vÃ©lo", "En mÃ©tro", "Ã€ pied"], answer: 2},
-            {q: "Que fait-elle le soir ?", options: ["Elle regarde la tÃ©lÃ©", "Elle lit et Ã©coute de la musique", "Elle fait du sport", "Elle cuisine"], answer: 1}
+            {q: "O&ugrave; habite Marie ?", options: ["&Agrave; Paris", "&Agrave; Lyon", "&Agrave; Marseille", "&Agrave; Bordeaux"], answer: 0},
+            {q: "Qu'&eacute;tudie Marie ?", options: ["Le droit", "La m&eacute;decine", "Les langues", "L'histoire"], answer: 1},
+            {q: "Comment va-t-elle &agrave; l'universit&eacute; ?", options: ["En bus", "&Agrave; v&eacute;lo", "En m&eacute;tro", "&Agrave; pied"], answer: 2},
+            {q: "Que fait-elle le soir ?", options: ["Elle regarde la t&eacute;l&eacute;", "Elle lit et &eacute;coute de la musique", "Elle fait du sport", "Elle cuisine"], answer: 1}
         ]
     },
     {
-        text: "Pierre est cuisinier dans un petit restaurant. Il travaille six jours par semaine. Son plat prÃ©fÃ©rÃ© Ã  prÃ©parer est le coq au vin. Les clients aiment beaucoup sa cuisine. Le dimanche, Pierre ne travaille pas. Il va voir ses parents Ã  la campagne.",
+        text: "Pierre est cuisinier dans un petit restaurant. Il travaille six jours par semaine. Son plat pr&eacute;f&eacute;r&eacute; &agrave; pr&eacute;parer est le coq au vin. Les clients aiment beaucoup sa cuisine. Le dimanche, Pierre ne travaille pas. Il va voir ses parents &agrave; la campagne.",
         questions: [
-            {q: "Quel est le mÃ©tier de Pierre ?", options: ["MÃ©decin", "Cuisinier", "Professeur", "Avocat"], answer: 1},
+            {q: "Quel est le m&eacute;tier de Pierre ?", options: ["M&eacute;decin", "Cuisinier", "Professeur", "Avocat"], answer: 1},
             {q: "Combien de jours travaille-t-il ?", options: ["Cinq", "Six", "Sept", "Quatre"], answer: 1},
-            {q: "Quel est son plat prÃ©fÃ©rÃ© ?", options: ["La soupe", "Le coq au vin", "Le steak", "La salade"], answer: 1},
+            {q: "Quel est son plat pr&eacute;f&eacute;r&eacute; ?", options: ["La soupe", "Le coq au vin", "Le steak", "La salade"], answer: 1},
             {q: "Que fait-il le dimanche ?", options: ["Il travaille", "Il dort", "Il va voir ses parents", "Il fait du sport"], answer: 2}
         ]
     },
     {
-        text: "Le Louvre est un musÃ©e cÃ©lÃ¨bre Ã  Paris. Il y a plus de 35 000 Å“uvres d'art. La Joconde est le tableau le plus connu du musÃ©e. Des millions de personnes visitent le Louvre chaque annÃ©e. Le musÃ©e est ouvert tous les jours sauf le mardi.",
+        text: "Le Louvre est un mus&eacute;e c&eacute;l&egrave;bre &agrave; Paris. Il y a plus de 35 000 &oelig;uvres d'art. La Joconde est le tableau le plus connu du mus&eacute;e. Des millions de personnes visitent le Louvre chaque ann&eacute;e. Le mus&eacute;e est ouvert tous les jours sauf le mardi.",
         questions: [
-            {q: "OÃ¹ se trouve le Louvre ?", options: ["Ã€ Londres", "Ã€ Rome", "Ã€ Paris", "Ã€ Berlin"], answer: 2},
-            {q: "Quel est le tableau le plus cÃ©lÃ¨bre ?", options: ["La Joconde", "Le Cri", "La Nuit Ã©toilÃ©e", "Les Tournesols"], answer: 0},
-            {q: "Combien d'Å“uvres y a-t-il ?", options: ["Moins de 10 000", "Plus de 35 000", "Exactement 50 000", "Environ 20 000"], answer: 1},
-            {q: "Quel jour le musÃ©e est-il fermÃ© ?", options: ["Lundi", "Mardi", "Mercredi", "Jeudi"], answer: 1}
+            {q: "O&ugrave; se trouve le Louvre ?", options: ["&Agrave; Londres", "&Agrave; Rome", "&Agrave; Paris", "&Agrave; Berlin"], answer: 2},
+            {q: "Quel est le tableau le plus c&eacute;l&egrave;bre ?", options: ["La Joconde", "Le Cri", "La Nuit &eacute;toil&eacute;e", "Les Tournesols"], answer: 0},
+            {q: "Combien d'&oelig;uvres y a-t-il ?", options: ["Moins de 10 000", "Plus de 35 000", "Exactement 50 000", "Environ 20 000"], answer: 1},
+            {q: "Quel jour le mus&eacute;e est-il ferm&eacute; ?", options: ["Lundi", "Mardi", "Mercredi", "Jeudi"], answer: 1}
         ]
     }
 ];
 
-// ==================== Ã‰TAT DU JEU ====================
+// ==================== &Eacute;TAT DU JEU ====================
 let currentMode = '';
 let currentQuestion = 0;
 let score = 0;
@@ -981,7 +981,7 @@ function addXP(amount) {
         playerData.currentXP -= playerData.xpToNext;
         playerData.level++;
         playerData.xpToNext = Math.floor(playerData.xpToNext * 1.5);
-        showFeedback('Niveau supÃ©rieur ! Vous Ãªtes maintenant niveau ' + playerData.level + ' ! ðŸŽ‰', 'correct');
+        showFeedback('Niveau sup&eacute;rieur ! Vous &ecirc;tes maintenant niveau ' + playerData.level + ' ! 🎉', 'correct');
     }
     saveData();
     updateStatsDisplay();
@@ -1015,11 +1015,11 @@ function startGame(mode) {
 
     const titles = {
         translate: 'Traduction Rapide',
-        verbs: 'MaÃ®tre des Verbes',
+        verbs: 'Ma&icirc;tre des Verbes',
         gender: 'Duel du Genre',
-        scramble: 'Mots MÃ©langÃ©s',
-        fillblank: 'ComplÃ©tez la Phrase',
-        comprehension: 'ComprÃ©hension'
+        scramble: 'Mots M&eacute;lang&eacute;s',
+        fillblank: 'Compl&eacute;tez la Phrase',
+        comprehension: 'Compr&eacute;hension'
     };
 
     document.getElementById('gameTitle').textContent = titles[mode];
@@ -1048,11 +1048,11 @@ function generateQuestions(mode) {
             }
             questions.push({
                 type: 'translate',
-                question: isFrToEn ? 'Que signifie "' + word.fr + '" ?' : 'Comment dit-on "' + word.en + '" en franÃ§ais ?',
+                question: isFrToEn ? 'Que signifie "' + word.fr + '" ?' : 'Comment dit-on "' + word.en + '" en fran&ccedil;ais ?',
                 correct: correct,
                 options: [correct, ...wrong].sort(() => Math.random() - 0.5),
                 category: word.category,
-                hint: isFrToEn ? 'Ã‡a commence par "' + word.en.charAt(0) + '"' : 'Ã‡a commence par "' + word.fr.charAt(0) + '"'
+                hint: isFrToEn ? '&Ccedig;a commence par "' + word.en.charAt(0) + '"' : '&Ccedig;a commence par "' + word.fr.charAt(0) + '"'
             });
         }
     } else if (mode === 'verbs') {
@@ -1074,7 +1074,7 @@ function generateQuestions(mode) {
                 correct: correct,
                 options: [correct, ...wrong].sort(() => Math.random() - 0.5),
                 category: 'Verbes',
-                hint: 'Pensez Ã  la forme ' + pronoun + ' de ' + verb.inf
+                hint: 'Pensez &agrave; la forme ' + pronoun + ' de ' + verb.inf
             });
         }
     } else if (mode === 'gender') {
@@ -1087,7 +1087,7 @@ function generateQuestions(mode) {
                 correct: noun.gender,
                 translation: noun.translation,
                 category: 'Genre',
-                hint: noun.gender === 'm' ? 'Pensez Ã  l\'article : "le"' : 'Pensez Ã  l\'article : "la"'
+                hint: noun.gender === 'm' ? 'Pensez &agrave; l\'article : "le"' : 'Pensez &agrave; l\'article : "la"'
             });
         }
     } else if (mode === 'scramble') {
@@ -1203,12 +1203,12 @@ function loadQuestion() {
     } else if (q.type === 'gender') {
         const container = document.createElement('div');
         container.className = 'gender-buttons';
-        container.innerHTML = '<button class="gender-btn masc" onclick="checkAnswer(\'m\', this)"><span class="gender-icon">ðŸ‘¨</span><span class="gender-label">Masculin<br>LE</span></button><button class="gender-btn fem" onclick="checkAnswer(\'f\', this)"><span class="gender-icon">ðŸ‘©</span><span class="gender-label">FÃ©minin<br>LA</span></button>';
+        container.innerHTML = '<button class="gender-btn masc" onclick="checkAnswer(\'m\', this)"><span class="gender-icon">👨</span><span class="gender-label">Masculin<br>LE</span></button><button class="gender-btn fem" onclick="checkAnswer(\'f\', this)"><span class="gender-icon">👩</span><span class="gender-label">F&eacute;minin<br>LA</span></button>';
         content.appendChild(container);
         document.getElementById('questionHint').textContent = 'Traduction : ' + q.translation;
     } else if (q.type === 'scramble') {
         const container = document.createElement('div');
-        container.innerHTML = '<div class="scramble-answer" id="scrambleAnswer"></div><div class="scramble-container" id="scrambleTiles"></div><button class="submit-btn" onclick="checkScramble()" style="margin-top:15px;">Valider</button><button class="hint-btn" onclick="resetScramble()" style="margin-left:10px;">RÃ©initialiser</button>';
+        container.innerHTML = '<div class="scramble-answer" id="scrambleAnswer"></div><div class="scramble-container" id="scrambleTiles"></div><button class="submit-btn" onclick="checkScramble()" style="margin-top:15px;">Valider</button><button class="hint-btn" onclick="resetScramble()" style="margin-left:10px;">R&eacute;initialiser</button>';
         content.appendChild(container);
 
         const tilesContainer = document.getElementById('scrambleTiles');
@@ -1240,13 +1240,13 @@ function getQuestionLabel(type) {
         verbs: 'Conjuguez ce verbe :',
         gender: 'Quel est le genre de ce nom ?',
         scramble: 'Remettez les lettres dans l\'ordre :',
-        fillblank: 'ComplÃ©tez la phrase :',
-        comprehension: 'Lisez et rÃ©pondez :'
+        fillblank: 'Compl&eacute;tez la phrase :',
+        comprehension: 'Lisez et r&eacute;pondez :'
     };
     return labels[type] || 'Question :';
 }
 
-// ==================== CHRONOMÃˆTRE ====================
+// ==================== CHRONOM&Egrave;TRE ====================
 function startTimer(seconds) {
     stopTimer();
     timeLeft = 100;
@@ -1276,7 +1276,7 @@ function stopTimer() {
 }
 
 function handleTimeout() {
-    showFeedback('Temps Ã©coulÃ© ! La rÃ©ponse Ã©tait : ' + questions[currentQuestion].correct, 'wrong');
+    showFeedback('Temps &eacute;coul&eacute; ! La r&eacute;ponse &eacute;tait : ' + questions[currentQuestion].correct, 'wrong');
     lives--;
     combo = 0;
     updateLives();
@@ -1289,7 +1289,7 @@ function handleTimeout() {
     }, 2000);
 }
 
-// ==================== VÃ‰RIFICATION DES RÃ‰PONSES ====================
+// ==================== V&Eacute;RIFICATION DES R&Eacute;PONSES ====================
 function checkAnswer(answer, element) {
     if (!gameActive) return;
     stopTimer();
@@ -1315,7 +1315,7 @@ function checkAnswer(answer, element) {
         score += points;
         correctCount++;
 
-        showFeedback('Correct ! +' + points + ' points' + (combo > 1 ? ' ðŸ”¥ x' + combo : ''), 'correct');
+        showFeedback('Correct ! +' + points + ' points' + (combo > 1 ? ' 🔥 x' + combo : ''), 'correct');
         createParticles(element);
 
         if (combo >= 3) {
@@ -1335,7 +1335,7 @@ function checkAnswer(answer, element) {
             }
         });
 
-        showFeedback('Faux ! La rÃ©ponse Ã©tait : ' + q.correct, 'wrong');
+        showFeedback('Faux ! La r&eacute;ponse &eacute;tait : ' + q.correct, 'wrong');
         document.getElementById('comboDisplay').classList.remove('show');
 
         if (element) element.classList.add('shake');
@@ -1399,7 +1399,7 @@ function checkScramble() {
         score += points;
         correctCount++;
 
-        showFeedback('Correct ! +' + points + ' points' + (combo > 1 ? ' ðŸ”¥ x' + combo : ''), 'correct');
+        showFeedback('Correct ! +' + points + ' points' + (combo > 1 ? ' 🔥 x' + combo : ''), 'correct');
 
         if (combo >= 3) {
             document.getElementById('comboCount').textContent = combo;
@@ -1408,7 +1408,7 @@ function checkScramble() {
     } else {
         combo = 0;
         lives--;
-        showFeedback('Faux ! La rÃ©ponse Ã©tait : ' + q.correct, 'wrong');
+        showFeedback('Faux ! La r&eacute;ponse &eacute;tait : ' + q.correct, 'wrong');
         document.getElementById('comboDisplay').classList.remove('show');
     }
 
@@ -1431,7 +1431,7 @@ function updateProgressDot(isCorrect) {
 }
 
 function updateLives() {
-    const hearts = 'â¤ï¸'.repeat(lives) + '<span class="lost">â¤ï¸</span>'.repeat(3 - lives);
+    const hearts = '❤️'.repeat(lives) + '<span class="lost">❤️</span>'.repeat(3 - lives);
     document.getElementById('livesDisplay').innerHTML = hearts;
 }
 
@@ -1444,13 +1444,13 @@ function showFeedback(text, type) {
 function showHint() {
     if (hintUsed) return;
     const q = questions[currentQuestion];
-    document.getElementById('hintText').textContent = 'ðŸ’¡ ' + q.hint;
+    document.getElementById('hintText').textContent = '💡 ' + q.hint;
     hintUsed = true;
 }
 
 function createParticles(element) {
     const rect = element.getBoundingClientRect();
-    const emojis = ['âœ¨', 'â­', 'ðŸŽ‰', 'ðŸ‡«ðŸ‡·', 'ðŸ’«'];
+    const emojis = ['✨', '⭐', '🎉', '🇫🇷', '💫'];
     for (let i = 0; i < 5; i++) {
         const p = document.createElement('div');
         p.className = 'particle';
@@ -1476,12 +1476,12 @@ function endGame() {
 
     addXP(xpEarned);
 
-    let emoji = 'ðŸ†';
-    let title = 'Bien jouÃ© !';
-    if (accuracy >= 90) { emoji = 'ðŸ¥‡'; title = 'Magnifique !'; }
-    else if (accuracy >= 70) { emoji = 'ðŸ¥ˆ'; title = 'TrÃ¨s bien !'; }
-    else if (accuracy >= 50) { emoji = 'ðŸ¥‰'; title = 'Bon travail !'; }
-    else { emoji = 'ðŸ“š'; title = 'Continuez Ã  pratiquer !'; }
+    let emoji = '🏆';
+    let title = 'Bien jou&eacute; !';
+    if (accuracy >= 90) { emoji = '🥇'; title = 'Magnifique !'; }
+    else if (accuracy >= 70) { emoji = '🥈'; title = 'Tr&egrave;s bien !'; }
+    else if (accuracy >= 50) { emoji = '🥉'; title = 'Bon travail !'; }
+    else { emoji = '📚'; title = 'Continuez &agrave; pratiquer !'; }
 
     document.getElementById('resultEmoji').textContent = emoji;
     document.getElementById('resultTitle').textContent = title;
@@ -1498,4 +1498,4 @@ function endGame() {
 loadData();
 </script>
 </body>
-  </html>
+                                       </html>
